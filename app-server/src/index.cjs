@@ -40,7 +40,7 @@ async function start() {
   );
 
   // Start the server
-  await server.start(port, "localhost");
+  await server.start(port, "0.0.0.0");
   console.log("Issuer URL:", server.issuer.url);
 }
 
