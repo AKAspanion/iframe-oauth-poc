@@ -2,7 +2,7 @@ const { OAuth2Server } = require("oauth2-mock-server");
 
 const server = new OAuth2Server();
 
-const port = process.env.PORT || "8080";
+const port = process.env.PORT || 4002;
 
 async function start() {
   // Generate a new RSA key and add it to the keystore
@@ -41,7 +41,7 @@ async function start() {
 
   // Start the server
   await server.start(port, "localhost");
-  console.log("Issuer URL:", server.issuer.url); // -> http://localhost:8080
+  console.log("Issuer URL:", server.issuer.url); // -> http://localhost:4002
 }
 
 async function stop() {

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.cjs",
     "start": "node src/index.cjs",
-    "ngrok": "ngrok http --domain=rational-driving-barnacle.ngrok-free.app 8080"
+    "ngrok": "ngrok http --domain=rational-driving-barnacle.ngrok-free.app 4002"
   },
   "keywords": [],
   "author": "",
