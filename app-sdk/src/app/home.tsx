@@ -31,7 +31,7 @@ export default function Home() {
         height={48}
         priority
       />
-      <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+      <ol className="list-inside list-decimal text-center sm:text-left">
         <li className="mb-2">This page is from App SDK</li>
         <li>This demonstrates SSO inside Iframe</li>
       </ol>
@@ -58,7 +58,11 @@ export default function Home() {
           Signin
         </Link>
       </div>
-      {code}
+      <div>
+        {code ? `Login Success!` : ""}
+        <br />
+        {code}
+      </div>
     </main>
   );
 }
