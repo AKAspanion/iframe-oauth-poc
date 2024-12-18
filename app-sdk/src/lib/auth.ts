@@ -1,11 +1,13 @@
 import type { NextAuthOptions } from "next-auth";
 import { MockProvider } from "./provider";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 // Define authentication options using NextAuthOptions interface
 export const authOptions: NextAuthOptions = {
   // Customize authentication pages
   pages: {
-    signIn: "/login", // Redirect users to "/login" when signing in
+    signIn: `${basePath}/login`, // Redirect users to "/login" when signing in
     // error: "/error",
   },
   callbacks: {
@@ -14,8 +16,8 @@ export const authOptions: NextAuthOptions = {
       return true;
     },
     async redirect(res) {
-      console.log("baseUrl", res, process.env.NEXT_PUBLIC_SDK_URL);
-      return process.env.NEXT_PUBLIC_SDK_URL || `http://localhost:4001`;
+      console.log("baseUrl", res);
+      return process.env.NEXT_PUBLIC_SDK_URL || `http://localhost/sdk`;
     },
     async session({ session }) {
       console.log("session", session);

@@ -43,14 +43,14 @@ export default function Home() {
           rel="noopener noreferrer"
           onClick={handleRedirect}
         >
-          Initiate
+          Redirect
         </a>
-        <Link
+        {/* <Link
           href={"/card"}
           className="border border-foreground rounded-full p-3 px-6 hover:bg-[#ccc] dark:hover:bg-[#383838]"
         >
           Card
-        </Link>
+        </Link> */}
         <Link
           href={"/login"}
           className="border border-foreground rounded-full p-3 px-6 hover:bg-[#ccc] dark:hover:bg-[#383838]"

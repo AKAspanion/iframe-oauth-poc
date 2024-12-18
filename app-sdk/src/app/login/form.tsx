@@ -30,7 +30,7 @@ export const LoginForm = () => {
         redirect: false,
         email: formValues.email,
         password: formValues.password,
-        callbackUrl: sdkHost || "http://localhost:4001",
+        callbackUrl: sdkHost || "http://localhost/sdk",
       });
 
       setLoading(false); // Set loading state back to false.

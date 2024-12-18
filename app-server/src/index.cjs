@@ -41,7 +41,7 @@ async function start() {
 
   // Start the server
   await server.start(port, "localhost");
-  console.log("Issuer URL:", server.issuer.url); // -> http://localhost:4002
+  console.log("Issuer URL:", server.issuer.url);
 }
 
 async function stop() {
